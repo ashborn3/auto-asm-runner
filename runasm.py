@@ -13,10 +13,7 @@ system(f"nasm -f elf64 {file}.asm")
 
 system(f"ld {file}.o -o {file}.out")
 
-print("OUTPUT :\n-")
+print("OUTPUT :")
 
 system(f"./{file}.out")
 
-print(f"-\nRemoving compiled file {file}.o and linked file {file}.out")
-
-system(f"rm {file}.out {file}.o")
